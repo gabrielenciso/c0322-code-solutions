@@ -1,0 +1,24 @@
+button {
+  box-sizing: border-box;
+  margin: 5px 0;
+  padding: 8px 25px;
+  font-size: large;
+}
+
+button:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+
+table {
+  border: 1px solid white;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(210 210 210);
+}
