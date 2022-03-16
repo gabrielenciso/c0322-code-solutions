@@ -1,0 +1,9 @@
+h1 {
+  font-family: 'Titillium Web', monospace;
+}
+
+h2,
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 2;
+}
