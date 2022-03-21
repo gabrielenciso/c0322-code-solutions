@@ -8,12 +8,20 @@
   flex-wrap: wrap;
 }
 
+.column {
+  width: 100%;
+}
+
 .column-half {
   width: 50%;
 }
 
 .column-one-third {
   width: calc(100% / 3);
+}
+
+.column-two-thirds {
+  width: calc((100% / 3) * 2);
 }
 
 .column-fourth {
