@@ -8,8 +8,8 @@
   flex-wrap: wrap;
 }
 
-.column {
-  width: 100%;
+.column-free {
+  width: auto;
 }
 
 .column-half {
@@ -75,6 +75,11 @@ header {
 
 header img {
   width: 115px;
+}
+
+header .column-free {
+  display: flex;
+  align-items: center;
 }
 
 header .row {
