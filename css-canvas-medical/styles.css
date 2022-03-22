@@ -1,0 +1,203 @@
+.container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-free {
+  width: auto;
+}
+
+.column-half {
+  width: 50%;
+}
+
+.column-one-third {
+  width: calc(100% / 3);
+}
+
+.column-two-thirds {
+  width: calc((100% / 3) * 2);
+}
+
+.column-fourth {
+  width: 25%;
+}
+
+.grey-text {
+  color: rgb(120 120 120);
+}
+
+.font-text {
+  font-family: Avenir, monospace;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-header {
+  font-family: "Tiempos Headline", sans-serif;
+}
+
+.small-font {
+  line-height: 25px;
+  font-size: 12.5px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+button {
+  background-color: rgb(41 67 99);
+  color: rgb(231 231 231);
+  border-radius: 3px;
+  border: none;
+  letter-spacing: 0.5px;
+}
+
+section button {
+  padding: 12px 38px;
+  font-size: 15px;
+}
+
+header {
+  padding: 20px 85px 10px;
+  justify-content: space-between;
+}
+
+header img {
+  width: 115px;
+}
+
+header .column-free {
+  display: flex;
+  align-items: center;
+}
+
+header .row {
+  font-size: 14px;
+  color: rgb(179 179 179);
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  padding: 20px;
+  font-weight: 500;
+}
+
+.locations > p {
+  margin-top: 0;
+  padding: 0 300px;
+}
+
+.learn-more p {
+  margin-top: 8px;
+}
+
+header .row > p {
+  padding: 0 22px;
+}
+
+header button {
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgb(240 240 240);
+  margin-top: 0;
+}
+
+.hero > div {
+  margin: 50px auto;
+}
+
+.hero-img {
+  background: linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0  / 20%)), url("images/hero.jpg");
+  background-size: cover;
+  width: 880px;
+  height: 465px;
+  position: relative;
+}
+
+.hero-img div {
+  color: rgb(255 255 255);
+  padding: 30px 412px 40px 65px;
+}
+
+.hero-img h1 {
+  font-size: 32px;
+  font-weight: 100;
+}
+
+.hero button {
+  margin-top: 10px;
+}
+
+.locations {
+  background-color: rgb(250 250 250);
+  width: 100%;
+  padding: 40px;
+  box-shadow: 0 0.5px rgb(224 224 224);
+}
+
+.locations-flex {
+  margin: 5px 0;
+  padding: 50px;
+}
+
+.locations > h2 {
+  margin-bottom: 12px;
+}
+
+.learn-more {
+  margin: 10px 0 20px;
+}
+
+footer .row {
+  padding-left: 55px;
+}
+
+.learn-more .row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.learn-more h2 {
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.learn-more .left-text {
+  padding-left: 85px;
+}
+
+.address {
+  background-color: rgb(82 83 81);
+  color: rgb(255 255 255);
+  padding: 100px 75px;
+}
+
+.address img {
+  width: 120px;
+  margin: 20px 0 30px;
+}
+
+.address .column-fourth:nth-child(1) p {
+  margin: 0;
+}
+
+footer {
+  background-color: rgb(250 250 250);
+}
