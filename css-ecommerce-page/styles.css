@@ -1,0 +1,52 @@
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-fifth {
+  width: calc(100% / 5);
+}
+
+.image {
+  width: 250px;
+  height: 300px;
+  padding: 10px;
+}
+
+.grey-text {
+  color: rgb(211 211 211);
+}
+
+.left-border {
+  border-left: 1px solid rgb(211 211 211);
+}
+
+.highlight {
+  background-color: rgb(255 241 231);
+}
+
+.contain {
+  object-fit: contain;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+}
+
+span {
+  font-size: 14px;
+}
+
+h1,
+span {
+  font-family: "DM Sans", sans-serif;
+}
+
+img {
+  width: 200px;
+}
