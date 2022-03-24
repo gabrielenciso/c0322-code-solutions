@@ -9,12 +9,14 @@
 
 .column-fifth {
   width: calc(100% / 5);
+  padding: 0 9px;
 }
 
 .image {
-  width: 250px;
-  height: 300px;
-  padding: 10px;
+  height: 320px;
+  width: 100%;
+  padding-left: 0;
+  position: relative;
 }
 
 .grey-text {
@@ -29,8 +31,8 @@
   background-color: rgb(255 241 231);
 }
 
-.contain {
-  object-fit: contain;
+.label {
+  margin: 10px 0;
 }
 
 h1 {
@@ -39,7 +41,8 @@ h1 {
 }
 
 span {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 900;
 }
 
 h1,
@@ -47,6 +50,22 @@ span {
   font-family: "DM Sans", sans-serif;
 }
 
-img {
-  width: 200px;
+.column-fifth span:nth-child(2) {
+  padding-left: 4px;
 }
+
+.contain {
+  height: 100%;
+  width: 200px;
+  object-fit: contain;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* .image img:nth-child(4) {
+  object-fit: cover;
+} */
