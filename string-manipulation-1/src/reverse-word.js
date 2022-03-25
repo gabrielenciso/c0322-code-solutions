@@ -7,9 +7,9 @@
 // join at end and return
 
 function reverseWord(word) {
-  var backwards = [];
-  for (var i = 0; i < word.length; i++) {
-    backwards.unshift(word[i]);
+  var backwards = '';
+  for (var i = word.length - 1; i >= 0; i--) {
+    backwards += word[i];
   }
-  return backwards.join('');
+  return backwards;
 }
