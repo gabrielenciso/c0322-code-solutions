@@ -7,10 +7,9 @@
 // if true continue else push to empty array
 
 function compact(array) {
-  var falsy = [false, 0, -0, 0n, '', null, undefined, NaN];
   var nonFalsy = [];
   for (var i = 0; i < array.length; i++) {
-    if (falsy.includes(array[i]) === false) {
+    if (array[i]) { // if true go through
       nonFalsy.push(array[i]);
     }
   }
