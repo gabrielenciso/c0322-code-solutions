@@ -1,10 +1,16 @@
 /* exported chunk */
 
 // func def
-// make array to store arrays
+// first check if array is empty if yes return []
+// make arrays to store arrays and subarray
 // loop through array
-// make empty array to store sub array
-// make another loop with size count and push to sub array when done push to main array
+// if subarray is less than size arg then pass
+// push current array val at i to subarray
+// if subarray length is larger than size then push subbaray to storage
+// then empty out subarray
+// then push the current array val at i to subarray since we're in the middle of a loop
+// check if last subarr is empty and if it is dont push
+
 function chunk(array, size) {
   if (array.length === 0) {
     return [];
@@ -21,6 +27,8 @@ function chunk(array, size) {
       subArr.push(array[i]);
     }
   }
-  storeArr.push(subArr);
+  if (subArr.length !== 0) {
+    storeArr.push(subArr);
+  }
   return storeArr;
 }

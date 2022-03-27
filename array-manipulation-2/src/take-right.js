@@ -2,7 +2,7 @@
 
 // func def
 // empty array
-// use splice and turn count arg to negative
+// use slice and turn count arg to negative
 // return
 
 function takeRight(array, count) {

@@ -1,7 +1,9 @@
 /* exported dropRight */
 
 // func def
-// use slice but positive number
+// make empty array
+// loop thru array but subtract count to length condition
+// push current array val at index i to empty array
 // return
 
 function dropRight(array, count) {
