@@ -2,17 +2,14 @@
 
 // func def
 // make empty obj
-// store keys and vals in array
-// loop thru one array
-// obj key with val obj val with key using index i
+// loop thru source with for in
+// fill up obj by using source[key] as value to put in key spot in bracket notation and make value to key
 // return
 
 function invert(source) {
   var obj = {};
-  var keys = Object.keys(source);
-  var vals = Object.values(source);
-  for (var i = 0; i < keys.length; i++) {
-    obj[vals[i]] = keys[i];
+  for (var key in source) {
+    obj[source[key]] = key;
   }
   return obj;
 }
