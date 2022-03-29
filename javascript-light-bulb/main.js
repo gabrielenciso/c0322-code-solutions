@@ -8,16 +8,16 @@
 
 var $circle = document.querySelector('.circle');
 var $body = document.querySelector('body');
-var toggle = 1;
+var toggle = true;
 
 $circle.addEventListener('click', function (event) {
-  if (toggle === 1) {
+  if (toggle === true) {
     $circle.className = 'circle yellow-button';
     $body.className = 'beige';
-    toggle = 0;
+    toggle = false;
   } else {
     $circle.className = 'circle grey-button';
     $body.className = 'black';
-    toggle = 1;
+    toggle = true;
   }
 });
