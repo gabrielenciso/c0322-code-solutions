@@ -20,6 +20,7 @@
   position: absolute;
   top: 5px;
   left: 5px;
+  z-index: 1;
 }
 
 .pop-up h2 {
@@ -39,6 +40,7 @@
   background-color: white;
   padding: 20px 30px;
   position: fixed;
+  z-index: 3;
 }
 
 .pop-up button {
@@ -62,29 +64,9 @@ button:hover {
   width: 100%;
   top: 0;
   bottom: 0;
-}
-
-.curtain {
-  background: white;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-}
-
-.z1 {
-  z-index: 1;
-}
-
-.z2 {
   z-index: 2;
 }
 
-.z3 {
-  z-index: 3;
-}
-
-.z4 {
-  z-index: 4;
+.display-none {
+  display: none;
 }

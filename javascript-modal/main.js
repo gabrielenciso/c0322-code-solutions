@@ -7,21 +7,16 @@
 // ^^ event handle when clicked pop up button change z index of querys
 
 var $landingButton = document.querySelector('.landing-button');
-var $curtain = document.querySelector('.curtain');
 var $overlay = document.querySelector('.overlay');
 var $popUp = document.querySelector('.pop-up');
 var $popUpButton = document.querySelector('.pop-up button');
 
 $landingButton.addEventListener('click', function () {
-  $landingButton.className = 'landing-button z2';
-  $curtain.className = 'curtain z1';
-  $overlay.className = 'overlay z3';
-  $popUp.className = 'pop-up z4';
+  $overlay.className = 'overlay';
+  $popUp.className = 'pop-up';
 });
 
 $popUpButton.addEventListener('click', function () {
-  $landingButton.className = 'landing-button z4';
-  $curtain.className = 'curtain z3';
-  $overlay.className = 'overlay z1';
-  $popUp.className = 'pop-up z2';
+  $overlay.className = 'overlay display-none';
+  $popUp.className = 'pop-up display-none';
 });
