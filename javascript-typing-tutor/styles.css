@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .phrase-box {
@@ -31,4 +32,47 @@
 span {
   margin-bottom: 5px;
   white-space: pre;
+}
+
+.overlay {
+  background: linear-gradient(rgb(0 0 0 / 80%), rgb(0 0 0 / 80%));
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.play-again {
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: white;
+  padding: 40px 100px;
+  position: fixed;
+  font-family: monospace;
+}
+
+.play-again button {
+  font-size: 28px;
+  font-family: monospace;
+  padding: 7px 35px;
+  background-color: rgb(98 235 93);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 1px 4px rgb(98 235 93);
+}
+
+.play-again button:hover {
+  cursor: pointer;
+}
+
+.play-again button:active {
+  background-color: rgb(71 112 69);
+  box-shadow: 0 1px 4px rgb(71 112 69);
+}
+
+.display-none {
+  display: none;
 }
