@@ -8,13 +8,21 @@
 // remove spaces for both words
 // loop thru both words using 1st string length - assume both words equal length
 // every new letter log to object with count
-// if letter already exists do obj[letter]++
+// if letter already exists do obj[letter] += 1;
+// after letter count done compare objects by:
+// looping thru obj2 with current obj1 property and so on
+// if properties are equal then check if values are not equal iif it is then fail
+// if all good then break key2 loop to move on to another obj1 property
+// keep count to measure iterations
+// if count === length of object properties then that means no property match
+// so false
+// if no false cases then return true
 
 function isAnagram(firstString, secondString) {
   var obj1 = {};
   var obj2 = {};
-  var string1 = firstString.replace(' ', '');
-  var string2 = secondString.replace(' ', '');
+  var string1 = firstString.replace(/\s/g, '');
+  var string2 = secondString.replace(/\s/g, '');
 
   if (string1.length !== string2.length) {
     return false;
@@ -44,7 +52,7 @@ function isAnagram(firstString, secondString) {
       }
       count++;
     }
-    if (count === string1.length) {
+    if (count === Object.keys(obj1).length) {
       return false;
     }
   }
