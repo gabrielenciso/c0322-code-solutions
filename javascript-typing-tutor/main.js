@@ -47,6 +47,19 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+// reset all modified elems in dom -> span classes by looping thru
+// remove popup and overlay
+// reset i count and error count and complete var
+// put line back in beginning
+
 $button.addEventListener('click', function (event) {
-  location.reload();
+  for (var k = 0; k < $chars.length; k++) {
+    $chars[k].className = '';
+  }
+  $playAgain.className = 'play-again display-none';
+  $overlay.className = 'overlay display-none';
+  i = 0;
+  err = 0;
+  complete = false;
+  $chars[0].className = 'line';
 });
