@@ -19,8 +19,9 @@ console.log('Lodash is loaded:', typeof _ !== 'undefined');
 // and increment last index -1
 
 // function for dealing cards to players with player objects and card deck obj parameter & find high score
+// lodash chunk to chunk cards array into 2 to assign to hand property of players
 // loop thru players array
-// random value to card array and remove it from array of cards x2
+// assign corresponding index of player and cards
 //
 // find high score
 // loop thru players and add up their values
@@ -49,11 +50,35 @@ function cardDeck() {
   var ranks = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
   var cards = [];
   for (var i = 0; i < suits.length; i++) {
-    var card = {};
     for (var j = 0; j < ranks.length; j++) {
+      var card = {};
       card[suits[i]] = ranks[j];
       cards.push(card);
     }
   }
   return cards;
+}
+
+function shuffle(cards) {
+  var shuffled = cards;
+  var lastIndex = cards.length - 1;
+  while (lastIndex > 0) {
+    var randIndex = Math.floor(Math.random() * lastIndex);
+    [cards[randIndex], cards[lastIndex]] = [cards[lastIndex], cards[randIndex]];
+    lastIndex--;
+  }
+  return shuffled;
+}
+
+function assign() {
+  var players = makePlayers();
+  var cards = shuffle(cardDeck());
+
+  var chunks = _.chunk(cards, 2);
+
+  for (var i = 0; i < players.length; i++) {
+    players[i].hand = chunks[i];
+  }
+
+  return players;
 }
