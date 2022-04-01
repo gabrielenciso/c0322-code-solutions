@@ -82,3 +82,9 @@ function assign() {
 
   return players;
 }
+
+// function score() {
+
+//   var players = assign();
+
+// }
