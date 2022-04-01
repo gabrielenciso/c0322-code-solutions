@@ -21,8 +21,8 @@
 function isAnagram(firstString, secondString) {
   var obj1 = {};
   var obj2 = {};
-  var string1 = firstString.replace(/\s/g, '');
-  var string2 = secondString.replace(/\s/g, '');
+  var string1 = firstString.replaceAll(' ', '');
+  var string2 = secondString.replaceAll(' ', '');
 
   if (string1.length !== string2.length) {
     return false;
