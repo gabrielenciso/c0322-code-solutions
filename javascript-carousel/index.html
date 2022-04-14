@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/49acd81928.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container row align-center">
+    <div class="carousel-box">
+      <div class="scroll-box row space-between">
+        <div class="col-free row align-center">
+          <i class="fa-solid fa-caret-left fa-2xl" id="left-arrow"></i>
+        </div>
+        <div class="image col-3-4">
+          <img src="images/001.png">
+        </div>
+        <div class="col-free row align-center">
+          <i class="fa-solid fa-caret-right fa-2xl" id="right-arrow"></i>
+        </div>
+      </div>
+      <div class="progress-box row justify-center">
+        <div class="progress-dots">
+          <span><i id="0" class="fa-solid fa-circle-dot highlight"></i></span>
+          <span><i id="1" class="fa-solid fa-circle-dot"></i></span>
+          <span><i id="2" class="fa-solid fa-circle-dot"></i></span>
+          <span><i id="3" class="fa-solid fa-circle-dot"></i></span>
+          <span><i id="4" class="fa-solid fa-circle-dot"></i></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
