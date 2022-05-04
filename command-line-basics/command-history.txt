@@ -1,0 +1,500 @@
+  111  git status
+  112  git status
+  113  git commit -m "some changes" --no-verify
+  114  git status
+  115  git switch main
+  116  git branch javascript-and-json
+  117  git switch javascript-and-json
+  118  git status
+  119  git status
+  120  git add javascript-and-json
+  121  git status
+  122  git commit -m "completed JS and JSON"
+  123  git status
+  124  git push origin javascript-and-json
+  125  git status
+  126  git stats
+  127  git status
+  128  git switch main
+  129  git switch string-manipulation-3
+  130  git status
+  131  git add string-manipulation-3
+  132  git status
+  133  git commit -m "replaced .replace(regex, '') to .replaceAll(' ', '')"
+  134  git status
+  135  git push origin string-manipulation-3
+  136  git status
+  137  git status
+  138  git status
+  139  git switch main
+  140  git switch object-manipulation-3
+  141  git status
+  142  git status
+  143  git status
+  144  git add object-manipulation-3
+  145  git status
+  146  git commit -m "some changes"
+  147  git commit -m "some changes" --no-verify
+  148  git status
+  149  git switch main
+  150  git status
+  151  git branch javascript-local-storage
+  152  git switch javascript-local-storage
+  153  git status
+  154  git status
+  155  git add javascript-local-storage
+  156  git status
+  157  git commit -m "completed javascript-local-storage"
+  158  git status
+  159  git push origin javascript-local-storage
+  160  git status
+  161  git status
+  162  git restore javascript-local-storage
+  163  git status
+  164  git status
+  165  git switch main
+  166  git switch object-manipulation-3
+  167  git status
+  168  git status
+  169  git status
+  170  git add object-manipulation-3
+  171  git status
+  172  git commit -m "completed object-manipulation-3!"
+  173  git status
+  174  git add object-manipulation-3
+  175  git commit -m "completed object-manipulation-3!"
+  176  git status
+  177  git push origin object-manipulation-3
+  178  git status
+  179  git status
+  180  git restore object-manipulation-3
+  181  git status
+  182  git switch main
+  183  git status
+  184  git status
+  185  git pull origin main
+  186  git status
+  187  git branch javascript-custom-methods
+  188  git status javascript-custom-methods
+  189  git switch javascript-custom-methods
+  190  git status
+  191  git status
+  192  git add javascript-custom-methods
+  193  git status
+  194  git commit -m "completed JS custom methods"
+  195  git status
+  196  git push origin javascript-custom-methods
+  197  git status
+  198  git status
+  199  git switch main
+  200  git branch javascript-this
+  201  git switch javascript-this
+  202  git status
+  203  git status
+  204  git add javascript-this
+  205  git status
+  206  git commit -m "completed JS this"
+  207  git push origin javascript-this
+  208  git status
+  209  git status
+  210  git switch main
+  211  git status
+  212  status
+  213  git pull origin main
+  214  git status
+  215  git status
+  216  git branch javascript-prototypes
+  217  git status
+  218  git switch javascript-prototypes
+  219  git status
+  220  git status
+  221  git status
+  222  git add javascript-prototypes
+  223  git status
+  224  git commit -m "completed javascript-prototypes"
+  225  git push origin javascript-prototypes
+  226  git push origin javascript-prototypes
+  227  git status
+  228  git switch main
+  229  git branch css-canvas-medical
+  230  git switch css-canvas-medical
+  231  git status
+  232  git add css-canvas-medical
+  233  git status
+  234  git commit -m "added team cards"
+  235  git status
+  236  git switch main
+  237  git branch javascript-constructors
+  238  git switch javascript-constructors
+  239  git status
+  240  git status
+  241  git add javascript-constructors
+  242  git status
+  243  git commit -m "completed javascript-constructors"
+  244  git status
+  245  git push origin javascript-constructors
+  246  git sttaus
+  247  git status
+  248  git switch main
+  249  git pull origin main
+  250  git status
+  251  git status
+  252  git switch javascript-bank
+  253  git branch javascript-bank
+  254  git switch javascript-bank
+  255  git status
+  256  git status
+  257  git add javascript-bank
+  258  git status
+  259  git commit -m "completed javascript bank"
+  260  git status
+  261  git push origin javascript-bank
+  262  git status
+  263  git status
+  264  git status
+  265  git switch main
+  266  git status
+  267  git status
+  268  git status
+  269  git pull origin main
+  270  git status
+  271  git switch javascript-timers
+  272  git branch javascript-timers
+  273  git switch javascript-timers
+  274  git status
+  275  git add javascript-timers
+  276  git status
+  277  git commit -m "completed javascript-timers?"
+  278  git push origin javascript-timers
+  279  git status
+  280  git status
+  281  git status
+  282  git restore javascript-timers
+  283  git status
+  284  git status
+  285  git switch main
+  286  git pull origin maion
+  287  git pull origin main
+  288  git status
+  289  git switch javascript-carousel
+  290  git branch javascript-carousel
+  291  git switch javascript-carousel
+  292  git status
+  293  git status
+  294  git add javascript-carousel
+  295  git status
+  296  git status
+  297  git add javascript-carousel
+  298  git add javascript-carousel
+  299  git status
+  300  git commit -m "completed javascript-carousel"
+  301  git status
+  302  git add javascript-carousel
+  303  git status
+  304  git commit -m "completed javascript-carousel"
+  305  git push origin javascript-carousel
+  306  git status
+  307  git add javascript-carousel
+  308  git status
+  309  git commit -m "added sound effects"
+  310  git commit -m "added sound effects" --no-verify
+  311  git status
+  312  git status
+  313  git status
+  314  git status
+  315  git switch main
+  316  http 
+  317  git status
+  318  git branch http-messages
+  319  git switch http-messages
+  320  git status
+  321  clear
+  322  http https://example.com
+  323  http --verbose http://www.example.com
+  324  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  325  http https://jsonplaceholder.typicode.com/users
+  326  http --body GET https://example.com > http-messages/index.html
+  327  git status
+  328  git add http-messages
+  329  git status
+  330  git commit -m "completed http-messages"
+  331  git push origin http-messages
+  332  git status
+  333  git status
+  334  git switch main
+  335  javascript-ajax
+  336  git branch javascript-ajax
+  337  git switch javascript-ajax
+  338  git status
+  339  git status
+  340  git add javascript-ajax
+  341  git status
+  342  git commit -m "completes javascript ajax"
+  343  git status
+  344  git push origin javascript-ajax
+  345  git status
+  346  git status
+  347  git status
+  348  git switch main
+  349  git pull origin main
+  350  git status
+  351  clear
+  352  http
+  353  http GET https://www.benbrougher.tech/hiker/v1/parks/
+  354  http GET https://www.benbrougher.tech/hiker/v1/trails/
+  355  http
+  356  http GET http://ccdb.hemiola.com/characters/radicals/85=="filter"=="gb"
+  357  http GET http://ccdb.hemiola.com/characters/radicals/85=="filter"=="gb&fields"=="kDefinition,kMandarin"
+  358  http GET http://ccdb.hemiola.com/characters/radicals/85=="filter=gb&fields=kDefinition,kMandarin"
+  359  http
+  360  git pull origin main
+  361  http
+  362  http https://www.benbrougher.tech/hiker/v1/trails/
+  363  http https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq
+  364  https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq
+  365  https://developer.nps.gov/api/v1/parks&api_key=0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq
+  366  https://developer.nps.gov/api/v1/activities&api_key=0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq
+  367  http https://developer.nps.gov/api/v1/activities&api_key=0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq
+  368  http https://0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJh@developer.nps.gov/api/v1/activities
+  369  http https://0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq@developer.nps.gov/api/v1/activities
+  370  http https://0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq@developer.nps.gov/api/v1/parks
+  371  http https://0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq@developer.nps.gov/api/v1/parks=="stateCode="CA""
+  372  http https://0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq@developer.nps.gov/api/v1/parks=="stateCode"
+  373  http https://0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq@developer.nps.gov/api/v1/parks=="stateCode='CA'"
+  374  http https://0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq@developer.nps.gov/api/v1/parks=="parkCode=acad,dena"
+  375  http https://0HgdOx9nb1gVzFC7Ac1iUJTDzHvmayQcbMUTcJhq@developer.nps.gov/api/v1/alerts=="parkCode=acad,dena"
+  376  http https://aztro.sameerkumar.website=="sign=taurus&day=today"
+  377  http https://aztro.sameerkumar.website=="sign=aries&day=today"
+  378  git branch http-messages
+  379  git switch http-messages
+  380  http https://app.ticketmaster.com/discovery/v2/events=="apikey=e8IWdaezvxzFUCIGKsk4nKP4d9uN2bKk&postalCode=92620&locale=*&city=Irvine&stateCode=Ca"
+  381  http https://app.ticketmaster.com/discovery/v2/events?apikey=e8IWdaezvxzFUCIGKsk4nKP4d9uN2bKk&postalCode=92620&locale=*&city=Irvine&stateCode=Ca
+  382  http https://app.ticketmaster.com/discovery/v2/events?apikey=e8IWdaezvxzFUCIGKsk4nKP4d9uN2bKk&postalCode=92620&locale=*&city=Irvine
+  383  clear
+  384  git status
+  385  git restore http-messages
+  386  git status
+  387  git add http-messages
+  388  git status
+  389  git commit -m "added main.js"
+  390  git commit -m "added main.js" --no-verify
+  391  git status
+  392  git switch main
+  393  clear() clear
+  394  clear
+  395  git switch http-messages
+  396  git status
+  397  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json=="input=LearningFuze&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q"
+  398  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=LearningFuze&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q
+  399  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json==""input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q"
+  400  clear
+  401  q
+  402  "
+  403  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json==""input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q"
+  404  "
+  405  clear
+  406  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json=="input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q"
+  407  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json
+  408    ?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry
+  409    &input=Museum%20of%20Contemporary%20Art%20Australia
+  410    &inputtype=textquery
+  411  https://maps.googleapis.com/maps/api/place/findplacefromtext/json
+  412    ?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry
+  413    &input=Museum%20of%20Contemporary%20Art%20Australia
+  414    &inputtype=textquery
+  415  clear
+  416  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json=="input=Learning%20Fuze&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q"
+  417  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json=="input=Museum&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q"
+  418  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json=="input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q"
+  419  http https://maps.googleapis.com/maps/api/place/findplacefromtext/jsoninput=="Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q"
+  420  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q
+  421  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDC6WIXZSh2kbT5hyLGSTHIw4WepTTqBSk
+  422  clear
+  423  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json \ input=='Museum%20of%20Contemporary%20Art%20Australia' inputtype=='textquery' fields=='formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry' key=='AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q'
+  424  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json \ input=='Museum%20of%20Contemporary%20Art%20Australia' inputtype=='textquery' fields=='formatted_address' key=='AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q'
+  425  http https://maps.googleapis.com/maps/api/place/findplacefromtext/json \ input=='Museum%20of%20Contemporary%20Art%20Australia' inputtype=='textquery' key=='AIzaSyDfUgDMB_ru5W6BPuTGY2wWQAf8CezIG2Q'
+  426  clear
+  427  git status
+  428  git restore
+  429  git restore http-messages
+  430  git status
+  431  git status
+  432  git restore http-messages
+  433  git status
+  434  git add .
+  435  git status
+  436  git commit -m "test map files"
+  437  git status
+  438  git status
+  439  git commit -m "added map tests" --no-verify
+  440  git status
+  441  git switch main
+  442  git status
+  443  git branch http-messages
+  444  git switch http-messages
+  445  git status
+  446  git switch main
+  447  git status
+  448  git branch es6-const-let
+  449  git switch es6-const-let
+  450  git status
+  451  git status
+  452  git add .
+  453  git status
+  454  git status
+  455  git commit -m "completed es6 const let"
+  456  git status
+  457  git push origin es6-const-let
+  458  git status
+  459  git status
+  460  git status
+  461  git status
+  462  git status
+  463  git switch main
+  464  git status
+  465  git branch es6-template-literals 
+  466  git status
+  467  git switch es6-template-literals 
+  468  git status
+  469  git statys
+  470  git status
+  471  git add es6-template-literals
+  472  git status
+  473  git sttaus
+  474  git status
+  475  git sttaus
+  476  git commit -m "completed es6-template-literals"
+  477  git status
+  478  git push origin es6-template-literals
+  479  git status
+  480  git status
+  481  git status
+  482  git switch main
+  483  git branch es6-destructuring
+  484  git switch es6-destructuring
+  485  git status
+  486  git status
+  487  git add es6-destructuring
+  488  git status
+  489  git status
+  490  git commit -m "completed es6 destructuring" 
+  491  git push origin es6-destructuring
+  492  git status
+  493  git status
+  494  git status
+  495  git switch main
+  496  git branch es6-arrow-functions
+  497  git switch es6-arrow-functions
+  498  git status
+  499  git status
+  500  git add es6-arrow-functions
+  501  git status
+  502  git status
+  503  git commit -m "completed es6 arrow functions"
+  504  git status
+  505  git push origin es6-arrow-functions
+  506  git status
+  507  git switch main
+  508  git pull origin main
+  509  clear
+  510  git branch command-line-basics
+  511  git switch command-line-basics
+  512  git status
+  513  cd command-line-basics
+  514  man man
+  515  man cat
+  516  cat laziness.txt
+  517  cat impatience.txt
+  518  cat hubris.txt
+  519  man cat
+  520  cat laziness.txt impatience.txt hubris.txt
+  521  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  522  -list
+  523  ls
+  524  man ls
+  525  man ls
+  526  ls -a
+  527  ls
+  528  man ls
+  529  ls -F
+  530  man ls
+  531  man ls
+  532  cd lfz-staff
+  533  ls
+  534  clear
+  535  ls
+  536  cd -
+  537  ls -aF
+  538  ls lfz-staff
+  539  ls -aF lfz-staff > lfz-staff/contents.txt
+  540  ls
+  541  cd lfz-staff
+  542  ls
+  543  cd - 
+  544  cat lfz-staff/contents.txt
+  545  man pwd
+  546  pwd
+  547  pwd > i-was-here.txt
+  548  cat i-was-here.txt
+  549  man echo
+  550  echo 'Hello, World!'
+  551  echo 'Hello, World!' > hello.txt
+  552  ls
+  553  cat hello.txt
+  554  clear
+  555  man touch
+  556  man touch
+  557  man touch
+  558  touch > tag-youre-it.txt
+  559  touch --help
+  560  touch
+  561  touch tag-youre-it.txt
+  562  clear
+  563  cat tag-youre-it.txt
+  564  touch snoot/boop.txt
+  565  ls snoot
+  566  man mkdir
+  567  man mkdir
+  568  mkdir parent
+  569  ls -aF
+  570  man mkdir
+  571  mkdir child -p parent
+  572  rm -r child
+  573  mkdir -p parent/child
+  574  ls parent
+  575  mkdir -p child/grandchild
+  576  rm child
+  577  rm -r child
+  578  mkdir -p parent/child/grandchild
+  579  ls parent/child
+  580  ls parent
+  581  ls child
+  582  man touch
+  583  touch .gitkeep parent/child/grandchild
+  584  ls parent/child/grandchild
+  585  touch parent/child/grandchild/.gitkeep
+  586  rm .gitkeep
+  587  ls parent/child/grandchild
+  588  ls parent
+  589  ls parent/child
+  590  ls parent/child/grandchild
+  591  ls -a parent/child/grandchild
+  592  clear
+  593  man mv
+  594  man mv
+  595  mv pokiemans pokemon
+  596  man rm
+  597  cat lol.txt
+  598  rm lol.txt
+  599  ls kill-me
+  600  rm -r kill-me
+  601  man cp
+  602  man cp
+  603  cp and-then.txt
+  604  man cp
+  605  cp and-then.txt no-and-then.txt
+  606  cat and-then.txt
+  607  cat no-and-then.txt
+  608  man history
+  609  history
+  610  history > command-history.txt
