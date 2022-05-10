@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+let json = require('./data.json');
 
 app.get('/api/notes', (req, res) => {
-  const json = require('./data.json');
   const notes = json.notes;
 
   const notesArray = [];
@@ -15,7 +15,6 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.get('/api/notes/:id', (req, res) => {
-  const json = require('./data.json');
   const notes = json.notes;
   const noteId = Number(req.params.id);
 
@@ -36,7 +35,6 @@ app.post('/api/notes', (req, res) => {
   if (Object.keys(newEntry).length === 0) {
     res.status(400).send({ error: 'content property not included' });
   } else {
-    let json = require('./data.json');
     const noteId = json.nextId;
     newEntry.id = noteId;
     json.notes[noteId] = newEntry;
@@ -55,7 +53,6 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-  let json = require('./data.json');
   const deleteId = Number(req.params.id);
 
   if (deleteId < 0) {
@@ -79,7 +76,6 @@ app.delete('/api/notes/:id', (req, res) => {
 });
 
 app.put('/api/notes/:id', (req, res) => {
-  let json = require('./data.json');
   const editId = Number(req.params.id);
   const editEntry = req.body;
 
@@ -92,7 +88,7 @@ app.put('/api/notes/:id', (req, res) => {
     json.notes[editId].content = editEntry.content;
     const editedNote = json.notes[editId];
     json = JSON.stringify(json, null, 2);
-    fs.writeFile('bruuuuh/data.json', json, 'utf8', err => {
+    fs.writeFile('./data.json', json, 'utf8', err => {
       if (err) {
         console.error(err);
         res.status(500).send({ error: 'An unexpected error occured' });
