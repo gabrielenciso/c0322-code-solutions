@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-let json = require('./data.json');
+const json = require('./data.json');
 
 app.get('/api/notes', (req, res) => {
   const notes = json.notes;
@@ -32,7 +32,7 @@ app.use(express.json());
 app.post('/api/notes', (req, res) => {
   const newEntry = req.body;
 
-  if (Object.keys(newEntry).length === 0) {
+  if (!newEntry.content) {
     res.status(400).send({ error: 'content property not included' });
   } else {
     const noteId = json.nextId;
@@ -40,8 +40,8 @@ app.post('/api/notes', (req, res) => {
     json.notes[noteId] = newEntry;
     json.nextId++;
 
-    json = JSON.stringify(json, null, 2);
-    fs.writeFile('./data.json', json, 'utf8', err => {
+    const editJSON = JSON.stringify(json, null, 2);
+    fs.writeFile('./data.json', editJSON, 'utf8', err => {
       if (err) {
         console.error(err);
         res.status(500).send({ error: 'An unexpected error occured' });
@@ -62,9 +62,9 @@ app.delete('/api/notes/:id', (req, res) => {
   } else {
 
     delete json.notes[deleteId];
-    json = JSON.stringify(json, null, 2);
+    const editJSON = JSON.stringify(json, null, 2);
 
-    fs.writeFile('./data.json', json, 'utf8', err => {
+    fs.writeFile('./data.json', editJSON, 'utf8', err => {
       if (err) {
         console.error(err);
         res.status(500).send({ error: 'An unexpected error occured' });
@@ -87,8 +87,8 @@ app.put('/api/notes/:id', (req, res) => {
 
     json.notes[editId].content = editEntry.content;
     const editedNote = json.notes[editId];
-    json = JSON.stringify(json, null, 2);
-    fs.writeFile('./data.json', json, 'utf8', err => {
+    const editJSON = JSON.stringify(json, null, 2);
+    fs.writeFile('./data.json', editJSON, 'utf8', err => {
       if (err) {
         console.error(err);
         res.status(500).send({ error: 'An unexpected error occured' });

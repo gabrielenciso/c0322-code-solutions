@@ -1,5 +1,5 @@
 {
-  "nextId": 20,
+  "nextId": 21,
   "notes": {
     "2": {
       "id": 2,
@@ -21,23 +21,9 @@
       "content": "edit",
       "id": 12
     },
-    "15": {
-      "id": 15
-    },
-    "16": {
-      "id": 16
-    },
     "17": {
       "id": 17,
       "content": "edit"
-    },
-    "18": {
-      "content": "edit pls",
-      "id": 18
-    },
-    "19": {
-      "content": "pls work",
-      "id": 19
     }
   }
 }
