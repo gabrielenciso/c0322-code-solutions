@@ -35,7 +35,6 @@ app.post('/api/grades', (req, res, next) => {
     return;
   }
 
-  // const score = String(req.body.score);
   const params = [req.body.name, req.body.course, req.body.score];
 
   const sql = `
@@ -58,8 +57,8 @@ app.post('/api/grades', (req, res, next) => {
 
 app.put('/api/grades/:gradeId', (req, res) => {
   const gradeId = Number(req.params.gradeId);
-  if (!Number.isInteger(gradeId) || gradeId < 0) {
-    res.status(400).json({ error: '"gradeId" must be a positive integer' });
+  if (!Number.isInteger(gradeId) || gradeId < 0 || !req.body.name || !req.body.course || !req.body.score) {
+    res.status(400).json({ error: 'missing name, course, or score | score must be a positive integer' });
     return;
   }
 
