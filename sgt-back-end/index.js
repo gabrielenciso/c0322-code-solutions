@@ -58,9 +58,65 @@ app.post('/api/grades', (req, res, next) => {
 
 app.put('/api/grades/:gradeId', (req, res) => {
   const gradeId = Number(req.params.gradeId);
-  if (!Number.insInteger(gradeId) || gradeId < 0) {
+  if (!Number.isInteger(gradeId) || gradeId < 0) {
     res.status(400).json({ error: '"gradeId" must be a positive integer' });
+    return;
   }
+
+  const params = [req.body.name, req.body.course, req.body.score, gradeId];
+
+  const sql = `
+  UPDATE "grades"
+      SET "name" = $1,
+          "course" = $2,
+          "score" = $3
+    WHERE "gradeId" = $4
+  RETURNING *
+  `;
+
+  db.query(sql, params)
+    .then(result => {
+      const updatedGrade = result.rows[0];
+      if (!updatedGrade) {
+        res.status(404).json({ error: `cannot find grade with "gradeId" ${gradeId}` });
+      } else {
+        res.status(200).json(updatedGrade);
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).json({ error: 'An unexpected error occured' });
+    });
+});
+
+app.delete('/api/grades/:gradeId', (req, res) => {
+  const gradeId = Number(req.params.gradeId);
+  if (!Number.isInteger(gradeId) || gradeId < 0) {
+    res.status(400).json({ error: '"gradeId" must be a positive integer' });
+    return;
+  }
+
+  const params = [gradeId];
+
+  const sql = `
+  DELETE from "grades"
+      WHERE "gradeId" = $1
+    RETURNING *;
+  `;
+
+  db.query(sql, params)
+    .then(result => {
+      const deleteGrade = result.rows[0];
+      if (!deleteGrade) {
+        res.status(404).json({ error: `cannot find grade with "gradeId" ${gradeId}` });
+      } else {
+        res.sendStatus(204);
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).json({ error: 'An unexpected error occured' });
+    });
 });
 
 app.listen(3000, () => {
