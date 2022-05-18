@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.toggle {
+  border: solid 3px black;
+  border-radius: 50px;
+  width: 175px;
+  height: 100px;
+}
+
+.toggle:hover {
+  cursor: pointer;
+}
+
+.toggle-off {
+  background: grey;
+}
+
+.toggle-on {
+  background: greenyellow;
+}
+
+.switch {
+  border: solid 3px black;
+  border-radius: 50%;
+  height: 100%;
+  width: 95px;
+  position: relative;
+  background: whitesmoke;
+}
+
+.switch-off {
+  left: -1px;
+}
+
+.switch-on {
+  left: 75px;
+}
+
+h1 {
+  margin-left: 1rem;
+}
