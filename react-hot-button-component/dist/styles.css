@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background: whitesmoke;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  font-size: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px gray;
+  color: grey;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+.blue {
+  background: blue;
+}
+
+.violet {
+  background: purple;
+}
+
+.red {
+  background: orangered;
+}
+
+.orange {
+  background: orange;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.white {
+  background: white;
+}
