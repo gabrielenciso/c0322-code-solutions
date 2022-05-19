@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  height: 100vh;
+}
+
+.container {
+  width: 200px;
+}
+
+.watch {
+  border: solid 1px black;
+  border-radius: 50%;
+  height: 200px;
+  width: 100%;
+}
+
+.watch:hover {
+  cursor: pointer;
+}
+
+.icon {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 3rem;
+}
