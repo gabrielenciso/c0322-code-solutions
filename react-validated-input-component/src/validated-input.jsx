@@ -58,19 +58,21 @@ class ValidatedInput extends React.Component {
   }
 
   render() {
+    const { mark, color, errorMessage } = this.handleErrorMessage();
+
     return (
       <div className='container'>
         <form>
           <label htmlFor="password">Password</label>
           <div className='flex'>
-            <input className={this.handleErrorMessage().color} type="password" name="password" value={this.state.password} onChange={this.handlePasswordChange}/>
+            <input className={color} type="password" name="password" value={this.state.password} onChange={this.handlePasswordChange}/>
             <div className="center-all">
-              <i className={`fa-solid fa-${this.handleErrorMessage().mark} fa-2xl ${this.handleErrorMessage().color}`}></i>
+              <i className={`fa-solid fa-${mark} fa-2xl ${color}`}></i>
             </div>
           </div>
           <ul className="requirements">
             {
-              this.handleErrorMessage().errorMessage.map((errorMsg, index) => (
+              errorMessage.map((errorMsg, index) => (
                 <li key={index} className='error-message'>
                   { errorMsg }
                 </li>
