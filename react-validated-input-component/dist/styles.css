@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 250px;
+}
+
+label {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+input {
+  width: 100%;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+p {
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: greenyellow;
+}
