@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 250px;
+}
+
+label {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+input {
+  width: 100%;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+p {
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  color: red;
+  font-size: 0.9rem;
+  height: 100px;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.red {
+  color: red;
+  border: solid 2px red;
+}
+
+.green {
+  color: greenyellow;
+  border: solid 2px greenyellow;
+}
+
+i.fa-solid {
+  border: none;
+}
