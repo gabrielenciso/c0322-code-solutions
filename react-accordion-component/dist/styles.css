@@ -9,3 +9,31 @@ body {
 .hidden {
   display: none;
 }
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+  width: 400px;
+}
+
+li {
+  border: solid 1px black;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background: whitesmoke;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+div {
+  padding: 0.5rem;
+  box-shadow: 1px 1px 5px gray inset;
+}
