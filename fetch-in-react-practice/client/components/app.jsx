@@ -99,7 +99,7 @@ export default class App extends React.Component {
         })
           .then(res => res.json())
           .then(res => {
-            const todoArr = this.state.todos;
+            const todoArr = this.state.todos.slice();
             todoArr[i] = res;
             this.setState({ todos: todoArr });
           });
