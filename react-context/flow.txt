@@ -1,0 +1,85 @@
+First page we see:
+
+   When app is initialized the constructor sets the state and binds the this.methods
+   to this. Then it renders once, but there is a gate and since this.state.isAuthorizing is true
+   then render returns null and goes to componentDidMount. componentDidMount sets up an event lisener
+   for the window obj for hashchange and sets up a token. There is no window.local.getItem('react-context-jwt')
+   currently so user is assigned null in state and isAuthorizing is false.
+
+   Render method goes again, this time we pass the gate and
+   state is deconstructed and user and route gets assigned from this.state, methods gets assigned from this,
+   and those variables are stored into an obj and put into contextValue. Return expression has the AppContext.provider
+   react element imported from ./lib/app-context with children components.
+
+   In the navbar component: since we havent signed in yet, user is null so sign in and sign up buttons are shown. We get user
+   from the this.context from AppContext assinged to the NAvbar context type. Page container component has a child of this.renderpage
+   so the method gets called, since path right now is blank, it returns the home component. Since theres no user
+   it directs to sign in through the Redirect component with prop to="sign-in" Redirect takes that prop value
+   and assigns it to url.has and window.location.replace(url) gets called so now we are in the sign-in page.
+
+User can sign up
+
+    When user clicks on sign up button, it triggers the event listener for the window obj from the href of the button
+    so now the hash is #sign-up and the route changes. We go to render and variables gets assigned. variables are assigned
+    to contextValue. return expression has AppContext.Provider imported from ./lib/app-context and gets prop value with value contextValue
+    Navbar is a child and page container has child this.renderPage() be called. Since path
+    has value sign up it returns Auth component.
+
+    The Auth component renders: variables user, route, and handleSignin
+    that is from context that is carried by the AppContext which we assigned to Authpage.contextType. route.path is not sign in
+    so welcome message shows create an account to get started. We skip to AuthForm and key, action, onSignin props get assigned with values.
+    AuthForm component constructor is loaded and creates state and methods are binded to this. Render is run, when input for username is changing
+    onchange event listener is triggers and handleChange event handler is called which changes the state of name to the input value and same goes for password.
+
+    When the form is submitted, handleSubmit is called. action has sign up from this.props, req body is made with method post, headers specified, user name and password from
+    state is stringified. Fetch is called to talk to server with a path and the req, the response is parsed. In the server we get the req.body. the password gets hashed and queried
+    into the data base along with the username. the result is sent back to the client as a 201 with the user obj
+    from the result. back to client side, we get the result back that is parsed and since action is sign up, window.location.hash is assigned sign-in now.
+
+User can sign in
+
+    Since vour hash changed from sign up to sign in from the fetch request, the render from the app component leads us to
+    the auth component with this.renderpage(). in the Auth component our welcome message becomes please sign in to continue.
+    We can go to auth form which handles all of the form changes. The constructor creates a state with blank username and password
+    and binds the methods. Then we go to render. this.props and this gets deconstructed and assigned to variables. Since action is not
+    sign up, our alterante action href/text and submitButtonText shows sign in and Log in. When the inputs are changed, the handleChange
+    is called and changes state. When the form is submitted, a request is made with fetch with an action in the JS expression that is sign-in.
+
+    In the server side, we go to the post request with path /api/auth/sign-in. If there was no username and password included it throws a 401,
+    if not then it passes the gate. We do a data base query with a sql string to select the stored userId and hashedpassword where username matches
+    the username the client provided. If the query promise returns a valid user from results then we pass it through as an argument in argon2.verify()
+    with the hashedpassword and the sign in password to see if it returns true or false. If it returns false, we throw a 401, and if good,
+    the user Id and username is sotred in a payload and passed as an argument in jwt.sign() along with a process.env.TOKEN_SECRET which assigns
+    it a token to that specific payload. and result is sent as a json with token and the payload. We go back to the client side in the fetch request
+    and receive the json. Json is parsed and we go through a conditional. Since action is sign in currently we go to the else if statement because user and token
+    returns a truthy. This triggers the onSignin prop with argument of the result which contains the payload and token. We go back to the auth component to the handleSignin
+    method, where it has a context from the AppContext so we can call handleSignin without passing it through another component. handleSignin takes the result
+    stores the user property and token property into variables from the result. window.localStorage is stored the token with a key of react-context-jwt and state is updated with the
+    user as current user.
+
+    ** not sure how hash turns empty **
+
+    We go back to the app component render method and we go to the this.renderpage( ) in the child of PAgeContainer.
+    The method is called and since path is empty, it returns the home component. Since our user that was sstored in context
+    is returns a truthy render returns a gif.
+
+User can stay signed in
+
+    Currently our hash is blank and we set an item in window.localStorage. If we refresh, that item is still stored so
+    when the app component initiates with the constructor method, the route is still blank. We go to the render and it returns null because
+    of the contructor. We go to the componentDidMount and that is where a token is assigned again from the window.local storage.getItem using
+    the key react-context-jwt, user is also assigned from jwtDecode(token) which returns the user payload. and state is updated to the payload
+    and isAuthorizing: false. In the render method of app we go to the Navbar compoenent where user is not null so it returns a
+    sign out button. Then this.renderPage is called in the child of PageContainer. Since path is blank we go to the home component where we pass the
+    gate because there is a valid user in the context. Then we get rick rolled.
+
+
+User can sign out
+
+    When sign out button is clicked it calls the handleSIgnout from the context. handleSignout removes the item with key react-context-jwt from
+    window.localStorage and sets the state user to null. When the page renders again, Navbar gets updated to show sign in and sign up button because
+    user is set to null. this.renderpage is called and returns the home component where it returns redirect because user is null. props.to has value sign-in
+    so that replaces the url.hash and window.location.replace is called with argument url. This triggers the event listener where window.location.hash is passed through
+    parseRoute as an argument and assigned to route in state so now our path in state is sign in. So in the end we render runs again in the app component and this time In
+    the this.renderPage call, it returns Auth component. Since our route.path is sign-in we get welcome message
+    Please sign in and register now alternate actiontext and log in for the button in the auth form component.
