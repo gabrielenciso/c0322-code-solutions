@@ -2,14 +2,13 @@
 
 function maxValue(stack) {
 
-  const copyStack = stack;
-  if (copyStack.print() === 'Stack { <empty> }') {
+  if (stack.peek() === undefined) {
     return -Infinity;
   }
 
   let max = -Infinity;
   while (1) {
-    const top = copyStack.pop();
+    const top = stack.pop();
     if (top === undefined) {
       return max;
     }

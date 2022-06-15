@@ -2,16 +2,15 @@
 
 function get2ndFromTop(stack) {
 
-  const copyStack = stack;
-  if (copyStack.print() === 'Stack { <empty> }') return undefined;
+  if (stack.peek() === undefined) return undefined;
 
-  const top = copyStack.pop();
-  if (copyStack.peek() === undefined) {
-    copyStack.push(top);
+  const top = stack.pop();
+  if (stack.peek() === undefined) {
+    stack.push(top);
     return undefined;
   } else {
-    const second = copyStack.peek();
-    copyStack.push(top);
+    const second = stack.peek();
+    stack.push(top);
     return second;
   }
 

@@ -2,7 +2,7 @@
 
 function isEmpty(stack) {
 
-  if (stack.print() === 'Stack { <empty> }') {
+  if (stack.peek() === undefined) {
     return true;
   } else {
     return false;
